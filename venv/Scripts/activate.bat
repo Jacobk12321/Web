@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\knapj\oreilly-intro-to-flask-video\Web-Apps\Web\venv"
+set "VIRTUAL_ENV=C:\Users\knapj\oreilly-intro-to-flask-video\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

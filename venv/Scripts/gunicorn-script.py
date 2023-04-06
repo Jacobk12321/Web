@@ -1,4 +1,4 @@
-#!c:\users\knapj\oreilly-intro-to-flask-video\web-apps\web\venv\scripts\python.exe
+#!c:\users\knapj\oreilly-intro-to-flask-video\venv\scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'gunicorn==19.0.0','console_scripts','gunicorn'
 __requires__ = 'gunicorn==19.0.0'
 import re
