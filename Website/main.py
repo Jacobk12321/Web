@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request , session
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.wtf import Form
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
@@ -60,9 +60,9 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.verify_password(form.password.data):
-            return redirect(url_for('login', **request.args))
+            return redirect(url_for('login.html', **request.args))
         login_user(user, form.remember_me.data)
-        return redirect(request.args.get('next') or url_for('index'))
+        return redirect(request.args.get('next') or url_for('index.html'))
     return render_template('login.html', form=form)
 
 
@@ -70,7 +70,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('index.html'))
 
 
 @app.route('/')
@@ -90,10 +90,10 @@ def register():
             msg = 'Account already exists !'
         elif not re.match(r'[A-Za-z0-9]+', username):
             msg = 'Username must contain only characters and numbers !'
-        elif not username or not password or not email:
+        elif not username or not password:
             msg = 'Please fill out the form !'
         else:
-            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s)', (username, password, email, ))
+            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s)', (username, password))
             mysql.connection.commit()
             msg = 'You have successfully registered !'
     elif request.method == 'POST':
