@@ -9,6 +9,7 @@ from flask.ext.login import LoginManager, UserMixin, login_user, logout_user, \
     login_required
 import re
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'top secret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.sqlite3'
