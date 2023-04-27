@@ -29,7 +29,7 @@
     text-color: #FFFFFF;
     border-radius: 10px;
 }
-     
+
 ::placeholder {
     color: #FFFFFF;
     opacity: 1;
@@ -48,3 +48,16 @@
     font-style: oblique;
     font-weight: bold;
 }
+
+table {
+    border-collapse: collapse;
+    width: 50%;}
+
+    td, th {
+    border: 2px solid  black;
+    text-align: left;
+    padding: 8px;}
+
+
+tr:nth-child(odd) {
+    background-color: #3B8CAD;}

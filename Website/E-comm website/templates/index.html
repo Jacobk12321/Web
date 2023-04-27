@@ -2,12 +2,70 @@
 
 {% block title %}Product Page{% endblock %}
 
+<head>
+    <meta charset="UTF-8">
+    <title> Index </title>
+    <link rel="stylesheet" href="{{ url_for(static, filename='style.css') }}">                    
+</head>
 
 {% block page_content %}
     <h1>Product page</h1>
-    <p>This page can be viewed by all users.</p>
-    <p>You are {% if not current_user.is_authenticated %}not {% endif %}logged in.</p>
 {% endblock %}
 
+<table>
+    <tr>
+        <th> Image</th>
+        <th> Description</th>
+        <th> Price</th>
+    </tr>
+    <tr>
+        <td> <img src ="/Website/E-comm website/static/Images/CW_1.jpg" alt = "AE86"> </td>
+        <td> (insert text here)</td>
+        <td>£90000 </td>
+    </tr>
+    <tr>
+        <td> <img src="/Website/E-comm website/static/Images/CW_2.jpg" alt="Nissan GTR"></td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr>
+        <td> <img src="/website/E-comm website/static/Image/CW_3.jpg" alt="Audi R8" ></td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr> 
+        <td> <img src = "/Website/E-comm website/static/Images/CW_4.jpg" alt = "Mclaren P1"></td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr> 
+        <td> <img src = "/Website/E-comm website/static/Images/CW_5.jpg" alt = "Mazda RX-7"></td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr>
+        <td> <img src ="/Website/E-comm website/static/Images/CW_6.jpg" alt ="Nissan 180SX"> </td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr>
+        <td> <img src = "/Website/E-comm website/static/Images/CW_7.jpg" alt= "Honda 2020 Acura NSX"></td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr> 
+        <td> <img src ="/Website/E-comm website/static/Images/Cw_8.jpg" alt = "Bugatti Chiron"> </td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+    <tr>
+        <td> <img src ="/Website/E-comm website/static/Images/CW_9.jpg" alt = "Reliant robin"> </td>
+        <td> (insert text here)</td>
+        <td> £90000</td>
+    </tr>
+
+
+
+</table>
 
 
