@@ -1,11 +1,11 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, redirect, url_for, request , session
-from flask.ext.bootstrap import Bootstrap
-from flask.ext.wtf import Form
+from flask_bootstrap import Bootstrap
+from flask_wtf import Form
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import Required, Length
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.login import LoginManager, UserMixin, login_user, logout_user, \
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_user, logout_user, \
     login_required
 import re
 
@@ -77,30 +77,6 @@ def logout():
 @app.route('/')
 def index():
     return render_template('index.html')
-
-@app.route('/register', methods =['GET', 'POST'])
-def register():
-    msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form :
-        username = request.form['username']
-        password = request.form['password']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM accounts WHERE username = % s', (username, ))
-        account = cursor.fetchone()
-        if account:
-            msg = 'Account already exists !'
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            msg = 'Username must contain only characters and numbers !'
-        elif not username or not password:
-            msg = 'Please fill out the form !'
-        else:
-            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s)', (username, password))
-            mysql.connection.commit()
-            msg = 'You have successfully registered !'
-    elif request.method == 'POST':
-        msg = 'Please fill out the form !'
-    return render_template('register.html', msg = msg)
-
 
 @app.errorhandler(404)
 def page_not_found(e):
