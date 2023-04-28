@@ -1,9 +1,9 @@
-#photo
-{
+#photo {
     width: 500px;
     height: auto;
     border: 20px;
-}
+    padding: 0%;}
+
 table {
     border-collapse: collapse;
     width: 50%;}
