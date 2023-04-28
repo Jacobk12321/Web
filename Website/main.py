@@ -3,7 +3,7 @@ from flask import Flask, render_template, redirect, url_for, request , session
 from flask_bootstrap import Bootstrap
 from flask_wtf import Form
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import Required, Length
+from wtforms.validators import DataRequired, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, \
     login_required
@@ -11,6 +11,7 @@ import re
 
 
 app = Flask(__name__)
+app.app_context().push()
 app.config['SECRET_KEY'] = 'top secret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.sqlite3'
 bootstrap = Bootstrap(app)
@@ -20,8 +21,8 @@ lm.login_view = 'login'
 
 
 class LoginForm(Form):
-    username = StringField('Username', validators=[Required(), Length(1, 16)])
-    password = PasswordField('Password', validators=[Required()])
+    username = StringField('Username', validators=[DataRequired(), Length(1, 16)])
+    password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember me')
     submit = SubmitField('Submit')
 
