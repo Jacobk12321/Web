@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}Product Page{% endblock %}
 
@@ -13,14 +14,14 @@
     <h1>Product page</h1>
     
 
-<table>
+<table style="width:100%">
     <tr>
-        <th> Image</th>
-        <th> Description</th>
-        <th> Price</th>
+        <th style="width:40%"> Image</th>
+        <th style="width:40%" > Description</th>
+        <th style="width:20%;" > Price</th>
     </tr>
     <tr>
-        <td> <img id="photo">  <img src ="/static/Images/CW_1.jpg" alt = "AE86" style="height: auto; width: 500px;"> </td>
+        <td> <img id="photo">  <img src ="/static/Images/CW_1.jpg" alt = "AE86" style="height: auto; width: 50%;"> </td>
         <td> (insert text here)</td>
         <td>£90000 </td>
     </tr>
@@ -65,6 +66,7 @@
         <td> £90000</td>
     </tr>
 </table>
+
 
 {% endblock %}
 

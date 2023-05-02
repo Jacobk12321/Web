@@ -59,8 +59,8 @@ def load_user(id):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+    if form.validate():
+        user = User.query.filer(username=form.username.data).first()
         if user is None or not user.verify_password(form.password.data):
             return redirect(url_for('login.html', **request.args))
         login_user(user, form.remember_me.data)
@@ -91,5 +91,5 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    db.create_all()
+    #db.create_all()
     app.run(debug=True)

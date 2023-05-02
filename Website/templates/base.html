@@ -1,8 +1,6 @@
 {% extends "bootstrap/base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %}Login Example{% endblock %}
-
 {% block navbar %}
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
@@ -22,7 +20,11 @@
     </nav>
 {% endblock %}
 
-<footer> <img src ="/Website/E-comm website/static/Images/WD.jpg"</footer>
+{% block content_1%}
+<header> <img src ="/static/Images/WD.jpg"></header>
+
+<footer> Check out this website as well. <img src="/static/Images/Spokes_logo.png"> </footer>
+{% endblock %}
 
 {% block content %}
     <div class="container">
