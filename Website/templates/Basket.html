@@ -3,17 +3,28 @@
 {% block title %}Basket Page{% endblock %}
 
 {% block page_content%}
-<table>
+{% if items |length !=0 %}
+    {% set cost = namespace(value=0) %}
+    <table style="width: 80%;">
     <thead>
     <th>Name</th>
     <th>Price</th>
-</thead>
-{% for name in items %}
-<tr>
+    <th>Amount</th>
+    <th>Cost for items</th>
+    </thead>
+    {% for name in items %}
+    <tr>
     <td>{{name}}</td>
-    <td>{{items[name]}}</td>
-</tr>
-{% endfor %}
-</table>
-
+    <td>{{items[name]["price"]}}</td>
+    <td>{{items[name]["amount"]}}<td>
+    <td>{{items[name]["price"] *items[name]["amount"] }}</td>
+    </tr>
+    {% set cost.value = cost.value + items[name]["price"] *items[name]["amount"] %}
+    {% endfor %}
+    
+    </table>
+    <h3>Total cost : £{{cost.value}} </h3>
+{% else %}
+<h3>No items in basket</h3>
+{% endif %}
 {% endblock %}

@@ -8,11 +8,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, \
     login_required
 import re
+import os
 
 
 app = Flask(__name__)
 app.app_context().push()
-app.config['SECRET_KEY'] = 'top secret!'
+app.config['SECRET_KEY'] = os.urandom(65)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.sqlite3'
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
@@ -85,13 +86,12 @@ def logout():
 
 @app.route('/', methods=["POST" , "GET"])
 def index():
-    if(request.method == 'POST' and "name" in request.form):
+    if(request.method == "POST" and "name" in request.form):
         if(request.form["name"] != None):
             item_name = request.form["name"]
             #added_product = Products.query.filter_by(name=item_name).first()
             Basket_adding(item_name)
 
-        
         
     return render_template('index.html')
 
@@ -115,14 +115,19 @@ def page_not_found(e):
 
 
 @app.route('/Basket')
-def basket():
+def Basket():
     items = {}
     if ("basket" in session):
         for name in session["basket"]:
             added_product = Products.query.filter_by(name=name).first()
-            items[name] = added_product.price
 
-            
+            if (name in items):
+                print(items[name]["amount"])
+                items[name]["amount"] += 1
+            else:
+                items[name] = {"price": added_product.price, "amount": 1}
+
+    print(items)
     return render_template("Basket.html" ,items=items )
 
 
