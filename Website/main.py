@@ -1,7 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, redirect, url_for, request , session
 from flask_bootstrap import Bootstrap
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, Length
 from flask_sqlalchemy import SQLAlchemy
@@ -20,7 +20,7 @@ lm = LoginManager(app)
 lm.login_view = 'login'
 
 
-class LoginForm(Form):
+class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(1, 16)])
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember me')
