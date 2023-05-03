@@ -4,4 +4,9 @@ db.create_all()
 P1= Products(name="AE86",description="TEMP",price="20000",e_impact="None")
 
 db.session.add(P1)
+
+from main import db, Products
+db.create_all()
+P2 = Products(name="GTR", description="TEMP" ,price="250000" , e_impact="None")
+db.session.add(P2)
 db.session.commit()

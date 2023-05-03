@@ -5,23 +5,22 @@
 {% block page_content%}
 {% if items |length !=0 %}
     {% set cost = namespace(value=0) %}
-    <table style="width: 80%;">
+    <table style="width: 100%;">
     <thead>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Amount</th>
-    <th>Cost for items</th>
+    <th style="width: 20%;" >Name</th>
+    <th style="width: 30%;" >Price</th>
+    <th style="width: 20%;">Amount</th>
+    <th style="width: 30%;" >Cost for items</th>
     </thead>
     {% for name in items %}
     <tr>
     <td>{{name}}</td>
-    <td>{{items[name]["price"]}}</td>
+    <td><p>£{{items[name]["price"]}}</p></td>
     <td>{{items[name]["amount"]}}<td>
-    <td>{{items[name]["price"] *items[name]["amount"] }}</td>
+    <td><p>£{{items[name]["price"] *items[name]["amount"]}}</p></td>
     </tr>
     {% set cost.value = cost.value + items[name]["price"] *items[name]["amount"] %}
     {% endfor %}
-    
     </table>
     <h3>Total cost : £{{cost.value}} </h3>
 {% else %}
