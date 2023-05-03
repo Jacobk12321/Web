@@ -33,6 +33,15 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(16), index=True, unique=True)
     password_hash = db.Column(db.String(64))
 
+class Products(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    description = db.Column(db.String(200), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    E_impact = db.Column(db.String(50) , nullable=False)
+
+
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -88,6 +97,10 @@ def page_not_found(e):
 @app.errorhandler(500)
 def page_not_found(e):
     return render_template('errors/500.html'), 500
+
+@app.route('/Basket')
+def basket():
+    pass
 
 
 if __name__ == '__main__':
