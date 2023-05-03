@@ -38,8 +38,7 @@ class Products(db.Model):
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(200), nullable=False)
     price = db.Column(db.Float, nullable=False)
-    E_impact = db.Column(db.String(50) , nullable=False)
-
+    e_impact = db.Column(db.String(50) , nullable=False)
 
 
     def set_password(self, password):
