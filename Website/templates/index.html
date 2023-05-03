@@ -13,7 +13,7 @@
 {% block page_content %}
     <h1>Product page</h1>
     
-
+<form method="POST">
 <table style="width:100%">
     <tr>
         <th style="width:50%"> Image</th>
@@ -25,7 +25,7 @@
         <td> <A href="/Products/AE86.html" img id="photo"> <img src ="/static/Images/CW_1.jpg" alt = "AE86" style="height: auto; width: 50%;"></td>
         <td> (insert text here)</td>
         <td>£90000 </td>
-        <td> <button> Add to basket</button></td>
+        <td> <button name="name" value="AE86" type="submit"> Add to basket</button></td>
     </tr>
     <tr>
         <td> <img id="photo"> <img src= "static/Images/CW_2.jpg" alt="Nissan GTR" style="height: auto; width: 50%;" ></td>
@@ -76,7 +76,7 @@
         <td> <button> Add to basket</button></td>
     </tr>
 </table>
-
+</form>
 {% endblock %}
 
 

@@ -83,13 +83,28 @@ def logout():
     return redirect(url_for('index.html'))
 
 
-@app.route('/')
+@app.route('/', methods=["POST" , "GET"])
 def index():
+    if(request.method == 'POST' and "name" in request.form):
+        if(request.form["name"] != None):
+            item_name = request.form["name"]
+            #added_product = Products.query.filter_by(name=item_name).first()
+            Basket_adding(item_name)
+
+        
+        
     return render_template('index.html')
+
+def Basket_adding(name):
+    if("basket" not in session):
+        session["basket"] = []
+        session["basket"].append(name)
+    else:
+        session["basket"].append(name)
+        session.modified = True
 
 @app.errorhandler(404)
 def page_not_found(e):
-    # note that we set the 404 status explicitly
     return render_template('errors/404.html'), 404
 
 
@@ -97,9 +112,18 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('errors/500.html'), 500
 
+
+
 @app.route('/Basket')
 def basket():
-    pass
+    items = {}
+    if ("basket" in session):
+        for name in session["basket"]:
+            added_product = Products.query.filter_by(name=name).first()
+            items[name] = added_product.price
+
+            
+    return render_template("Basket.html" ,items=items )
 
 
 if __name__ == '__main__':
