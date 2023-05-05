@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, \
     login_required
-import re
+from jinja2 import environment
 import os
 
 
@@ -53,11 +53,11 @@ class User(UserMixin, db.Model):
 
 class Products(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50))
-    description = db.Column(db.Text())
-    price = db.Column(db.Float)
-    e_impact = db.Column(db.String(50))
-    image_url = db.Column(db.String(64))
+    name = db.Column(db.String(50), nullable = False)
+    description = db.Column(db.Text(), nullable = False)
+    price = db.Column(db.Float(), nullable = False)
+    e_impact = db.Column(db.String(50) , nullable = False)
+    image_url = db.Column(db.String(64), nullable = False)
 
 
 
@@ -135,9 +135,9 @@ def Basket():
                 items[name] = {"price": added_product.price, "amount": 1}
     return render_template("Basket.html" ,items=items )
 
-@app.route()
+@app.route('/Product')
 def Product_page():
-    Car_name = request.args.get("C_name")  
+    Car_name = request.args.get("Car_name")  
     if (Car_name == None): # if users chooses a page with no car it then goes to the index function which goes to the product page
         return index()
     
@@ -146,7 +146,7 @@ def Product_page():
     if(searched_car == None):
         return index()
     else:
-        render_template("Product.html" , name=Car_name , description = Products.description , Price =Products.price , E_impact = Products.e_impact)
+        return render_template("Product.html" , name=Car_name , description = searched_car.description , Price =searched_car.price , E_impact = searched_car.e_impact , Image =searched_car.image_url)
 
 
 if __name__ == '__main__':
