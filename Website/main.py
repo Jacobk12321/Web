@@ -117,6 +117,12 @@ def page_not_found(e):
 @app.route('/Basket', methods=["POST" , "GET"])
 def Basket():
     items = {}
+    if(request.method == "POST" and "clear_all" in request.form):
+        session.pop("basket")
+        session.modified = True
+    if(request.method == "POST" and "Clear_item" in request.form):
+        session["basket"] = [name for name in session["basket"] if name !=  request.form["Clear_item"]]
+        session.modified = True
     if ("basket" in session):
         for name in session["basket"]:
             added_product = Products.query.filter_by(name=name).first()
@@ -126,8 +132,6 @@ def Basket():
                 items[name]["amount"] += 1
             else:
                 items[name] = {"price": added_product.price, "amount": 1}
-
-    print(items)
     return render_template("Basket.html" ,items=items )
 
 

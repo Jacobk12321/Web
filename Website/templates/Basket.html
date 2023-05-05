@@ -6,6 +6,7 @@
 {% block page_content%}
 {% if items |length !=0 %}
     {% set cost = namespace(value=0) %}
+    <form method="POST">
     <table style="width: 100%;">
     <thead>
     <th style="width: 20%;" >Name</th>
@@ -20,14 +21,17 @@
     <td><p>£{{items[name]["price"]}}</p></td>
     <td><p>{{items[name]["amount"]}}</p></td>
     <td><p>£{{(items[name]["price"] *items[name]["amount"])}}</p></td>
+    <td> <button name="Clear_item" value={{name}} type="submit">Remove item</button> </td>
     </tr>
     {% set cost.value = cost.value + items[name]["price"] *items[name]["amount"] %}
     {% endfor %}
     </table>
-    <button name="name" value="clear" type="submit"> clear basket</button>
+    
+    <button name="clear_all" value="clear_all" type="submit"> clear basket</button>
     <h3>Total cost : £{{cost.value}} </h3>
 {% else %}
 <h3>No items in basket</h3>
 {% endif %}
+</form>
 {% endblock %}
 
