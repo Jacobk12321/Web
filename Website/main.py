@@ -114,13 +114,13 @@ def page_not_found(e):
 
 
 
-@app.route('/Basket')
+@app.route('/Basket', methods=["POST" , "GET"])
 def Basket():
     items = {}
     if ("basket" in session):
         for name in session["basket"]:
             added_product = Products.query.filter_by(name=name).first()
-
+            
             if (name in items):
                 print(items[name]["amount"])
                 items[name]["amount"] += 1

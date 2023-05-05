@@ -32,7 +32,6 @@ environmental impact : 275g CO2/km comb
 
 
 Audi R8 
-price : £120000
 description : The Audi R8 is a high-performance sports car that offers a perfect blend of power, luxury, and style. This two-seater supercar is designed to deliver an exhilarating driving experience, with its sleek design, powerful engine, and advanced technology.
 The exterior of the Audi R8 is striking and aerodynamic, with a low profile and sharp lines that give it a distinctive look. The car's LED headlights and taillights are sleek and futuristic, and the wide grille gives it a bold and imposing presence on the road.
 Under the hood, the Audi R8 is powered by a 5.2-liter V10 engine that produces up to 602 horsepower and 413 lb-ft of torque. This engine is paired with a seven-speed dual-clutch automatic transmission and Audi's signature Quattro all-wheel-drive system, which provides exceptional handling and acceleration.
@@ -46,9 +45,9 @@ Weight : 1625 Kg
 0-100km/h : 3.5sec
 L/W/H/WB : 4426/1940/1240/2650 mm
 environmental impact :285g CO2/Km
+price : £120000
 
 P1 
-price : £1200000
 description : The McLaren P1 is a limited-edition hybrid supercar that is designed to deliver the ultimate driving experience. This iconic car was produced between 2013 and 2015 and has quickly become one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the McLaren P1 is sleek and aerodynamic, with a low and wide stance that screams performance. Its curvy body lines and sharp edges create a bold and dynamic look, while the distinctive dihedral doors add to its aggressive character.
 Under the hood, the McLaren P1 is powered by a hybrid powertrain that includes a 3.8-liter twin-turbo V8 engine paired with an electric motor. Together, they produce a total of 903 horsepower and 664 lb-ft of torque, which propels the car from 0-60 mph in just 2.6 seconds and on to a top speed of 217 mph.
@@ -62,10 +61,10 @@ Weight : 1490 Kg
 0-100 km/H : 2.8sec
 L/W/H/WB = 4588/1956/1188/2670 mm
 environmental impact : 194 g CO2/Km
+price : £1200000
 
 
 RX-7
-price : £21000
 description :The Mazda RX-7 is a classic sports car that was produced by Mazda from 1978 to 2002. It was one of the company's most iconic models, known for its sleek design, excellent handling, and powerful rotary engine.
 The RX-7's design is characterized by its long, low hood, sharply angled windshield, and short, sloping rear deck. Its aerodynamic shape and lightweight body give it a sporty and agile appearance, while its pop-up headlights and wrap-around taillights add a touch of elegance.
 Under the hood, the RX-7 is powered by a unique rotary engine, which uses a triangular rotor instead of the conventional pistons found in most engines. This engine design allows for a high power-to-weight ratio, giving the RX-7 impressive acceleration and speed.
@@ -78,10 +77,10 @@ Weight : 1284kg
 0-100kmh : 5.4sec 
 L/W/H/WB : 4295/1750/1230/2425 mm
 environmental impact : 325g CO2 /km
+price : £21000
 
 
 180SX
-price : £16000
 description : The Nissan 180SX/Silvia is a popular sports car that was produced from 1989 to 1998. This car is highly sought after by car enthusiasts and drifters around the world for its sleek design, rear-wheel drive handling, and potential for high-performance modifications.
 The exterior of the Nissan 180SX/Silvia is sporty and aerodynamic, with a low profile and smooth lines that give it a distinctive look. The car's pop-up headlights and sloping rear end give it a timeless appeal, while the lightweight body makes it ideal for racing and drifting.
 Under the hood, the Nissan 180SX/Silvia is powered by a variety of engines, depending on the model and year. The most common engine is the turbocharged 2.0-liter inline-four, which produces around 200 horsepower and 200 lb-ft of torque. This engine is paired with a five-speed manual transmission, which provides precise shifting and control.
@@ -94,10 +93,11 @@ Transmission : 5 speed manual
 Weight : 1270 kg
 0-100kmh : 6.9sec
 L/W/H/WB : 4540/1690/1290/2475 mm
-environmental impact :
+environmental impact : 350g CO2/km comb
+
+price : £16000
 
 2020 acura 
-price : £127000
 description : The 2020 Acura NSX is a stunning supercar that represents the pinnacle of Acura's engineering prowess. This two-seater sports car is designed to deliver a thrilling driving experience, with its sleek design, powerful engine, and advanced technology.
 The exterior of the Acura NSX is sleek and aerodynamic, with a low and wide stance that gives it an aggressive and sporty look. The car's LED headlights and taillights are sleek and futuristic, and the wide front grille provides both style and function.
 Under the hood, the Acura NSX is powered by a hybrid powertrain that includes a 3.5-liter twin-turbo V6 engine and three electric motors. Together, they produce up to 573 horsepower and 476 lb-ft of torque, which propels the car from 0-60 mph in just 2.9 seconds and on to a top speed of 191 mph.
@@ -110,10 +110,11 @@ Weight : 1790 kg
 0-100kmh : 2.9 sec
 L/W/H/WB : 176.1/87.3/47.8/103.5 in
 environmental impact : 280 g CO2/km
+price : £127000
+
 
 
 Bugatti 
-price : £2400000
 description : The Bugatti Chiron is a hypercar that represents the pinnacle of automotive engineering and design. This limited-edition supercar was introduced in 2016 as the successor to the Bugatti Veyron, and quickly became one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the Bugatti Chiron is sleek and aerodynamic, with a low and wide stance that exudes performance and style. Its curvy body lines and sharp edges create a bold and dynamic look, while the signature horseshoe grille and C-shaped headlight design pay homage to Bugatti's rich heritage.
 Under the hood, the Bugatti Chiron is powered by a quad-turbocharged 8.0-liter W16 engine that produces a staggering 1,479 horsepower and 1,180 lb-ft of torque. This power is sent to all four wheels via a seven-speed dual-clutch transmission, which provides lightning-fast shifts and exceptional handling.
@@ -127,10 +128,10 @@ Weight : 1996 kg
 0-100kmh : 2.3sec
 L/W/H/WB : 4554/2038/1212/2711 mm
 environmental impact : 516g/km
+price : £2400000
 
 
 Reliant robin
-price :  £4000
 description : The Reliant Robin is a three-wheeled car that was produced by the British manufacturer Reliant Motor Company from 1973 to 2002. This unique car is instantly recognizable by its unusual design, which features a single front wheel and two rear wheels.
 The exterior of the Reliant Robin is quirky and distinctive, with a tall and narrow body that gives it a distinctive look on the road. The car's large windows provide excellent visibility, while the lightweight design makes it nimble and easy to maneuver in tight spaces.
 Under the hood, the Reliant Robin is powered by a small 848 cc engine that produces just 40 horsepower. While this may not seem like a lot of power, the car's lightweight design allows it to achieve a top speed of around 85 miles per hour.
@@ -142,3 +143,4 @@ Weight : 436 kg
 0-100kmh : 16.1sec
 L/W/H/WB : 3327/1422/1372/2159 mm
 environmental impact : 250 g CO2/km
+price :  £4000

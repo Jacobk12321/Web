@@ -16,7 +16,6 @@
     </thead>
     {% for name in items %}
     <tr>
-    <hr>
     <td><p>{{name}}</p></td>
     <td><p>£{{items[name]["price"]}}</p></td>
     <td><p>{{items[name]["amount"]}}</p></td>
@@ -25,9 +24,10 @@
     {% set cost.value = cost.value + items[name]["price"] *items[name]["amount"] %}
     {% endfor %}
     </table>
-    <hr>
+    <button name="name" value="clear" type="submit"> clear basket</button>
     <h3>Total cost : £{{cost.value}} </h3>
 {% else %}
 <h3>No items in basket</h3>
 {% endif %}
 {% endblock %}
+
