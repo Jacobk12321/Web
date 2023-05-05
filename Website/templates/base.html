@@ -5,7 +5,13 @@
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('index') }}">
-                <img src ="/static/Images/WD.jpg" style="width: 10%; height: auto; padding: 0%;">
+                <img src ="/static/Images/WD.jpg" style="width: 7%; height: auto;">
+            </a>
+            <a class="navbar-brand_2" href="{{ url_for('index') }}">
+                <img src="/static/Images/Spokes_logo.png" alt="Spokes" style="width: 7%; height: auto;">
+            </a>
+            <a class="navbar-brand_3" href="{{ url_for('index') }}">
+                <img src="/static/Images/F1.5.jpg" alt="F1" style="width: 7%; height: auto;">
             </a>
             <a class="navbar-brand" href="{{ url_for('index') }}">
                 Products
@@ -24,13 +30,6 @@
             </ul>
         </div>
     </nav>
-{% endblock %}
-
-{% block content_1 %}
-<header> <img src ="/static/Images/WD.jpg"></header>
-
-<footer> Check out this website as well! <img src="/static/Images/Spokes_logo.png" alt="Spokes"> </footer>
-<footer>Check out this website as well! <img src="/static/Images/F1.5.jpg" alt="F1"></footer>
 {% endblock %}
 
 {% block content %}

@@ -4,152 +4,144 @@ db.create_all()
 P1= Products(name="AE86",description=""" The Toyota Sprinter Trueno AE86 is a legendary sports car that was produced by Toyota from 1983 to 1987. It is perhaps best known for its appearance in the popular Japanese anime and manga series Initial D, where it was driven by the main character, Takumi Fujiwara.
 The AE86 has a classic and timeless design, with a boxy shape and angular lines that give it a distinctively 80s look. Its compact size and lightweight construction make it an agile and nimble performer on the road.
 Under the hood, the AE86 is powered by a 1.6-liter inline-four engine, which produces around 130 horsepower. While not particularly powerful by modern standards, the engine is known for its high-revving capabilities and smooth power delivery.
-Inside, the AE86 is designed for the driver, with a simple and functional dashboard and controls that are easy to reach and operate. The seats are supportive and comfortable, and the steering wheel and shifter are positioned perfectly for sporty driving. ||
+Inside, the AE86 is designed for the driver, with a simple and functional dashboard and controls that are easy to reach and operate. The seats are supportive and comfortable, and the steering wheel and shifter are positioned perfectly for sporty driving.""" ,
+engine = "Engine: 1587cc 4cyl, dohc, 16v",
+torque ="Max torque: 149Nm @ 5200rpm",
+transmission ="Transmission: 5-speed manual",
+weight =" Weight: 970kg" ,
+size ="L/W/H/WB: 4204/1626/1336/2400mm",
+zero_to_60 ="0-100km/h: 8.5sec" ,
+price="30000", 
+e_impact="500 g CO2/km", 
+image_url ="static/Images/CW_1.jpg")  
 
-Engine: 1587cc 4cyl, dohc, 16v ||
-Max torque: 149Nm @ 5200rpm ||
-Transmission: 5-speed manual ||
-Weight: 970kg ||
-0-100km/h: 8.5sec ||
-L/W/H/WB: 4204/1626/1336/2400mm ||
-environmental impact : 500 g CO2/km """, ||
-price="30000", ||
-e_impact="500 g CO2/km", ||
-image_url ="static/Images/CW_1")||
 
 P2= Products(name="GTR",description = """The Nissan GT-R 2018 is a high-performance sports car that is known for its incredible speed and precision handling. This car is the latest in a long line of legendary GT-R models, and it continues to push the boundaries of what is possible in terms of performance and technology.
 The exterior of the GT-R 2018 is sleek and aggressive, with a low profile and sharp lines that give it a distinctive look. The front grille is large and imposing, and the rear spoiler provides both downforce and visual impact.
 Under the hood, the GT-R 2018 is powered by a twin-turbocharged 3.8-liter V6 engine that produces 565 horsepower and 467 lb-ft of torque. This engine is paired with a six-speed dual-clutch automatic transmission that provides lightning-fast shifts and precise control.
 Inside, the GT-R 2018 is designed for the driver, with a cockpit-style layout that puts all controls within easy reach. The seats are sporty and comfortable, with plenty of lateral support to keep the driver and passenger in place during high-speed maneuvers.
-The GT-R 2018 also features advanced technology, including a customizable digital instrument cluster, a high-resolution touchscreen display, and a sophisticated all-wheel-drive system that delivers power to all four wheels for maximum traction and control./n
+The GT-R 2018 also features advanced technology, including a customizable digital instrument cluster, a high-resolution touchscreen display, and a sophisticated all-wheel-drive system that delivers power to all four wheels for maximum traction and control.""", 
 
-Engine : V6 Turbo 3.8 Liter /n
-Max torque : 467Nm @ 3,300rpm /n
-Transmission : 6 Speed Automatic (GR6)/n
-Weight : 1785 Kg /n
-0-100km/h : 3.3sec /n
-L/W/H/WB: 185.4/74.6/53.9/109.4 in /n
-environmental impact : 275g CO2/km comb """,/n
-price= "92000", /n
-e_impact ="275g CO2/km comb", /n
-image_url ="static/Images/CW_2")
+engine= "Engine : V6 Turbo 3.8 Liter" ,
+torque = "Max torque : 467Nm @ 3,300rpm" ,
+transmission ="Transmission : 6 Speed Automatic (GR6)",
+weight = "Weight : 1785 Kg" ,
+zero_to_60 = "0-100km/h : 3.3sec" ,
+size ="L/W/H/WB: 185.4/74.6/53.9/109.4 in" ,
+price= "92000", 
+e_impact ="275g CO2/km comb",
+image_url ="static/Images/CW_2.jpg")
  
 
 P3= Products(name="Audi_R8",description = """The Audi R8 is a high-performance sports car that offers a perfect blend of power, luxury, and style. This two-seater supercar is designed to deliver an exhilarating driving experience, with its sleek design, powerful engine, and advanced technology.
 The exterior of the Audi R8 is striking and aerodynamic, with a low profile and sharp lines that give it a distinctive look. The car's LED headlights and taillights are sleek and futuristic, and the wide grille gives it a bold and imposing presence on the road.
 Under the hood, the Audi R8 is powered by a 5.2-liter V10 engine that produces up to 602 horsepower and 413 lb-ft of torque. This engine is paired with a seven-speed dual-clutch automatic transmission and Audi's signature Quattro all-wheel-drive system, which provides exceptional handling and acceleration.
 Inside, the Audi R8 is designed to provide both comfort and performance. The cabin is spacious and luxurious, with premium materials and cutting-edge technology throughout. The seats are supportive and comfortable, and the driver's seat is fully adjustable to provide the perfect driving position.
-The Audi R8 also features advanced technology, including a customizable digital instrument cluster, a high-resolution touchscreen display, and a sophisticated driver assistance system that includes adaptive cruise control and automatic emergency braking. /n
+The Audi R8 also features advanced technology, including a customizable digital instrument cluster, a high-resolution touchscreen display, and a sophisticated driver assistance system that includes adaptive cruise control and automatic emergency braking.""" , 
 
-Engine :V10 5.2L /n
-Max torque : 560Nm@6500rpm /n
-Transmission : 7 speed Automatic /n
-Weight : 1625 Kg /n
-0-100km/h : 3.5sec /n
-L/W/H/WB : 4426/1940/1240/2650 mm /n 
-environmental impact :285g CO2/Km""", /n
-price= "120000", /n
-e_impact="285g CO2/km", /n
-image_url ="static/Images/CW_3")
+engine = "Engine :V10 5.2L" ,
+torque = "Max torque : 560Nm@6500rpm" ,
+transmission = "Transmission : 7 speed Automatic" ,
+weight =" Weight : 1625 Kg" ,
+zero_to_60 =" 0-100km/h : 3.5sec" ,
+size= "L/W/H/WB : 4426/1940/1240/2650 mm" , 
+price= "120000", 
+e_impact="285g CO2/km",
+image_url ="static/Images/CW_3.jpg")
 
 P4=Products(name="P1",description =""" The McLaren P1 is a limited-edition hybrid supercar that is designed to deliver the ultimate driving experience. This iconic car was produced between 2013 and 2015 and has quickly become one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the McLaren P1 is sleek and aerodynamic, with a low and wide stance that screams performance. Its curvy body lines and sharp edges create a bold and dynamic look, while the distinctive dihedral doors add to its aggressive character.
 Under the hood, the McLaren P1 is powered by a hybrid powertrain that includes a 3.8-liter twin-turbo V8 engine paired with an electric motor. Together, they produce a total of 903 horsepower and 664 lb-ft of torque, which propels the car from 0-60 mph in just 2.6 seconds and on to a top speed of 217 mph.
 The interior of the McLaren P1 is focused on the driver, with a minimalist design that puts all the essential controls within easy reach. The bucket seats are made of lightweight carbon fiber and are designed to provide exceptional support and comfort during high-speed driving.
-The McLaren P1 also features advanced technology, including a high-resolution touchscreen display, a digital instrument cluster, and an active aerodynamics system that adjusts the car's downforce to optimize performance.
+The McLaren P1 also features advanced technology, including a high-resolution touchscreen display, a digital instrument cluster, and an active aerodynamics system that adjusts the car's downforce to optimize performance.""" ,
 
-Engine : V8 3.8L /n
-max torque : 720 Nm @ 4000 rpm /n
-Transmission : 7 speed Automatic /n
-Weight : 1490 Kg /n
-0-100 km/H : 2.8sec /n
-L/W/H/WB = 4588/1956/1188/2670 mm /n
-environmental impact : 194 g CO2/Km""",/n
-price = "1200000",/n
-e_impact="194g CO2/km", /n
-image_url ="static/Images/CW_4") /n
+engine= "Engine : V8 3.8L" ,
+torque = "max torque : 720 Nm @ 4000 rpm" ,
+transmission= "Transmission : 7 speed Automatic" ,
+weight = "Weight : 1490 Kg" ,
+zero_to_60= "0-100 km/H : 2.8sec" ,
+size = " L/W/H/WB = 4588/1956/1188/2670 mm" ,
+price = "1200000",
+e_impact="194g CO2/km",
+image_url ="static/Images/CW_4.jpg") ,
 
 P5= Products(name="RX-7", description = """The Mazda RX-7 is a classic sports car that was produced by Mazda from 1978 to 2002. It was one of the company's most iconic models, known for its sleek design, excellent handling, and powerful rotary engine.
 The RX-7's design is characterized by its long, low hood, sharply angled windshield, and short, sloping rear deck. Its aerodynamic shape and lightweight body give it a sporty and agile appearance, while its pop-up headlights and wrap-around taillights add a touch of elegance.
 Under the hood, the RX-7 is powered by a unique rotary engine, which uses a triangular rotor instead of the conventional pistons found in most engines. This engine design allows for a high power-to-weight ratio, giving the RX-7 impressive acceleration and speed.
-Inside, the RX-7 is designed for the driver, with a cockpit-style layout that puts all controls within easy reach. The bucket seats are supportive and comfortable, while the steering wheel and shifter are positioned for precise and responsive driving. /n
+Inside, the RX-7 is designed for the driver, with a cockpit-style layout that puts all controls within easy reach. The bucket seats are supportive and comfortable, while the steering wheel and shifter are positioned for precise and responsive driving.""",
 
-Engine : 1.3L Twin-chamber rotary, twin-turbo/n
-Max torque : 296 Nm @ 5000rpm /n
-Transmission : 5 speed manual /n
-Weight : 1284kg /n
-0-100kmh : 5.4sec /n
-L/W/H/WB : 4295/1750/1230/2425 mm /n
-environmental impact : 325g CO2 /km""", /n
-price = "21000", /n
-e_impact ="325g CO2/km", /n
-image_url ="static/Images/CW_5") /n
+engine = "Engine : 1.3L Twin-chamber rotary, twin-turbo",
+torque=" Max torque : 296 Nm @ 5000rpm ",
+transmission= "Transmission : 5 speed manual" ,
+weight = "Weight : 1284kg" ,
+zero_to_60= "0-100kmh : 5.4sec ",
+size = "L/W/H/WB : 4295/1750/1230/2425 mm" ,
+price = "21000", 
+e_impact ="325g CO2/km",
+image_url ="static/Images/CW_5.jpg")
 
 P6= Products(name="180SX",description =""" The Nissan 180SX/Silvia is a popular sports car that was produced from 1989 to 1998. This car is highly sought after by car enthusiasts and drifters around the world for its sleek design, rear-wheel drive handling, and potential for high-performance modifications.
 The exterior of the Nissan 180SX/Silvia is sporty and aerodynamic, with a low profile and smooth lines that give it a distinctive look. The car's pop-up headlights and sloping rear end give it a timeless appeal, while the lightweight body makes it ideal for racing and drifting.
 Under the hood, the Nissan 180SX/Silvia is powered by a variety of engines, depending on the model and year. The most common engine is the turbocharged 2.0-liter inline-four, which produces around 200 horsepower and 200 lb-ft of torque. This engine is paired with a five-speed manual transmission, which provides precise shifting and control.
 Inside, the Nissan 180SX/Silvia is designed for the driver, with a simple and functional cabin layout that puts all the essential controls within easy reach. The bucket seats are supportive and comfortable, and the steering wheel is small and sporty, providing excellent feedback and control.
-The Nissan 180SX/Silvia is also highly customizable, with a huge range of aftermarket parts and modifications available to enhance its performance and style. This makes it a popular choice for car enthusiasts who want to create a truly unique and personalized sports car. /n
+The Nissan 180SX/Silvia is also highly customizable, with a huge range of aftermarket parts and modifications available to enhance its performance and style. This makes it a popular choice for car enthusiasts who want to create a truly unique and personalized sports car.""" ,
 
-Engine: 1.8L turbo /n
-Max torque : 225 Nm @ 4000 rpm /n
-Transmission : 5 speed manual /n
-Weight : 1270 kg /n
-0-100kmh : 6.9sec /n
-L/W/H/WB : 4540/1690/1290/2475 mm /n
-environmental impact : 350g CO2/km comb""", /n
-price = 16000, /n
-e_impact ="350g CO2/km comb", /n
-image_url ="static/Images/CW_6") /n
+engine= "Engine: 1.8L turbo" ,
+torque = "Max torque : 225 Nm @ 4000 rpm" ,
+transmission = "Transmission : 5 speed manual", 
+weight ="Weight : 1270 kg", 
+zero_to_60 = "0-100kmh : 6.9sec", 
+size= "L/W/H/WB : 4540/1690/1290/2475 mm", 
+price = 16000, 
+e_impact ="350g CO2/km comb", 
+image_url ="static/Images/CW_6.jpg")
 
 P7 =Products(name="2020_acura",description =""" The 2020 Acura NSX is a stunning supercar that represents the pinnacle of Acura's engineering prowess. This two-seater sports car is designed to deliver a thrilling driving experience, with its sleek design, powerful engine, and advanced technology.
 The exterior of the Acura NSX is sleek and aerodynamic, with a low and wide stance that gives it an aggressive and sporty look. The car's LED headlights and taillights are sleek and futuristic, and the wide front grille provides both style and function.
 Under the hood, the Acura NSX is powered by a hybrid powertrain that includes a 3.5-liter twin-turbo V6 engine and three electric motors. Together, they produce up to 573 horsepower and 476 lb-ft of torque, which propels the car from 0-60 mph in just 2.9 seconds and on to a top speed of 191 mph.
 The interior of the Acura NSX is both luxurious and functional, with high-quality materials and cutting-edge technology throughout. The seats are comfortable and supportive, and the driver's seat is fully adjustable to provide the perfect driving position. The cockpit is also designed to provide easy access to all the essential controls, making it easy to focus on the road ahead.
-The Acura NSX also features advanced technology, including a customizable digital instrument cluster, a high-resolution touchscreen display, and a sophisticated driver assistance system that includes adaptive cruise control and automatic emergency braking. /n
+The Acura NSX also features advanced technology, including a customizable digital instrument cluster, a high-resolution touchscreen display, and a sophisticated driver assistance system that includes adaptive cruise control and automatic emergency braking.""" , 
 
-Engine: V6 3.5L /n
-Max torque 406 Nm @ 2000 rom /n
-Transmission : 9 speed Automatic /n
-Weight : 1790 kg /n
-0-100kmh : 2.9 sec /n
-L/W/H/WB : 176.1/87.3/47.8/103.5 in /n
-environmental impact : 280 g CO2/km""",/n
-price ="127000", /n
-e_impact = "280 g CO2/km", /n
-image_url ="static/Images/CW_7")
+engine= "Engine: V6 3.5L" ,
+torque = "Max torque 406 Nm @ 2000 rpm" ,
+transmission= "Transmission : 9 speed Automatic" ,
+weight = "Weight : 1790 kg" ,
+zero_to_60= "0-100kmh : 2.9 sec" ,
+size =  "L/W/H/WB : 176.1/87.3/47.8/103.5 in" ,
+price ="127000",
+e_impact = "280 g CO2/km", 
+image_url ="static/Images/CW_7.jpg")
 
 P8 =Products(name="Bugatti",description =""" The Bugatti Chiron is a hypercar that represents the pinnacle of automotive engineering and design. This limited-edition supercar was introduced in 2016 as the successor to the Bugatti Veyron, and quickly became one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the Bugatti Chiron is sleek and aerodynamic, with a low and wide stance that exudes performance and style. Its curvy body lines and sharp edges create a bold and dynamic look, while the signature horseshoe grille and C-shaped headlight design pay homage to Bugatti's rich heritage.
 Under the hood, the Bugatti Chiron is powered by a quad-turbocharged 8.0-liter W16 engine that produces a staggering 1,479 horsepower and 1,180 lb-ft of torque. This power is sent to all four wheels via a seven-speed dual-clutch transmission, which provides lightning-fast shifts and exceptional handling.
 The interior of the Bugatti Chiron is luxurious and spacious, with high-quality materials and cutting-edge technology throughout. The seats are comfortable and supportive, and the driver's seat is fully adjustable to provide the perfect driving position. The cockpit is also designed to provide easy access to all the essential controls, making it easy to focus on the road ahead.
-The Bugatti Chiron also features advanced technology, including a high-resolution touchscreen display, a digital instrument cluster, and a sophisticated driver assistance system that includes adaptive cruise control and automatic emergency braking.
+The Bugatti Chiron also features advanced technology, including a high-resolution touchscreen display, a digital instrument cluster, and a sophisticated driver assistance system that includes adaptive cruise control and automatic emergency braking.""" ,
 
-Engine: 8L quad turbo charged /n
-Max torque : 1600 Nm @ 4000 rpm /n
-Transmission : 7 speed Automatic /n
-Weight : 1996 kg /n
-0-100kmh : 2.3sec /n
-L/W/H/WB : 4554/2038/1212/2711 mm /n
-environmental impact : 516g/km""", /n
-price ="2400000", /n
-e_impact = "515g CO2/km", /n
-image_url ="static/Images/CW_8") /n 
+engine=" Engine: 8L quad turbo charged" ,
+torque= "Max torque : 1600 Nm @ 4000 rpm" ,
+transmission = "Transmission : 7 speed Automatic ",
+weight = "Weight : 1996 kg" ,
+zero_to_60= "0-100kmh : 2.3sec" ,
+size = "L/W/H/WB : 4554/2038/1212/2711 mm" ,
+price ="2400000", 
+e_impact = "515g CO2/km", 
+image_url ="static/Images/CW_8.jpg") , 
 
 P9 = Products(name="Reliant_robin",description = """ The Reliant Robin is a three-wheeled car that was produced by the British manufacturer Reliant Motor Company from 1973 to 2002. This unique car is instantly recognizable by its unusual design, which features a single front wheel and two rear wheels.
 The exterior of the Reliant Robin is quirky and distinctive, with a tall and narrow body that gives it a distinctive look on the road. The car's large windows provide excellent visibility, while the lightweight design makes it nimble and easy to maneuver in tight spaces.
 Under the hood, the Reliant Robin is powered by a small 848 cc engine that produces just 40 horsepower. While this may not seem like a lot of power, the car's lightweight design allows it to achieve a top speed of around 85 miles per hour.
-The interior of the Reliant Robin is basic and utilitarian, with few frills or luxuries. The seats are comfortable enough for short trips, but the cramped interior space may be a challenge for taller drivers or passengers. However, the car's unique design provides a sense of fun and adventure that more conventional cars may lack.
-Engine: 848 cc /n
-Max torque : 62 Nm @ 5500 rpm /n
-Transmission : 4 speed manual /n
-Weight : 436 kg /n
-0-100kmh : 16.1sec /n
-L/W/H/WB : 3327/1422/1372/2159 mm /n
-environmental impact : 250 g CO2/km""", /n
-price ="4000", /n
-e_impact = "250g CO2/km", /n
-image_url ="static/Images/CW_9") /n
+The interior of the Reliant Robin is basic and utilitarian, with few frills or luxuries. The seats are comfortable enough for short trips, but the cramped interior space may be a challenge for taller drivers or passengers. However, the car's unique design provides a sense of fun and adventure that more conventional cars may lack.""",
+
+engine = "Engine: 848 cc" ,
+torque= "Max torque : 62 Nm @ 5500 rpm" ,
+transmission ="Transmission : 4 speed manual" ,
+weight ="Weight : 436 kg" ,
+zero_to_60 = "0-100kmh : 16.1sec" ,
+size ="L/W/H/WB : 3327/1422/1372/2159 mm" ,
+price ="4000", 
+e_impact = "250g CO2/km", 
+image_url ="static/Images/CW_9.jpg") ,
 
 db.session.add(P1)
 db.session.add(P2)
@@ -161,30 +153,3 @@ db.session.add(P7)
 db.session.add(P8)
 db.session.add(P9)
 db.session.commit()
-
-
-
-from main import db, Products
-db.create_all()
-
-P1= Products(name="AE86",description=""" The Toyota Sprinter Trueno AE86 is a legendary sports car that was produced by Toyota from 1983 to 1987. It is perhaps best known for its appearance in the popular Japanese anime and manga series Initial D, where it was driven by the main character, Takumi Fujiwara.
-The AE86 has a classic and timeless design, with a boxy shape and angular lines that give it a distinctively 80s look. Its compact size and lightweight construction make it an agile and nimble performer on the road.
-Under the hood, the AE86 is powered by a 1.6-liter inline-four engine, which produces around 130 horsepower. While not particularly powerful by modern standards, the engine is known for its high-revving capabilities and smooth power delivery.
-Inside, the AE86 is designed for the driver, with a simple and functional dashboard and controls that are easy to reach and operate. The seats are supportive and comfortable, and the steering wheel and shifter are positioned perfectly for sporty driving. 
-
-Engine: 1587cc 4cyl, dohc, 16v \n
-Max torque: 149Nm @ 5200rpm \n
-Transmission: 5-speed manual \n
-Weight: 970kg \n
-0-100km/h: 8.5sec \n
-L/W/H/WB: 4204/1626/1336/2400mm \n
-environmental impact : 500 g CO2/km """, 
-
-price="30000", 
-e_impact="500 g CO2/km", 
-image_url ="static/Images/CW_1.jpg")  
-
-db.session.add(P1)
-db.session.commit()
-
-

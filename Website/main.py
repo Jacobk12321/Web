@@ -55,6 +55,12 @@ class Products(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable = False)
     description = db.Column(db.Text(), nullable = False)
+    engine = db.Column(db.String(50) , nullable = False)
+    torque = db.Column(db.String(50) , nullable = False)
+    transmission = db.Column(db.String(50) , nullable = False)
+    weight = db.Column(db.String(50) , nullable = False)
+    size = db.Column(db.String(50) , nullable = False)
+    zero_to_60 = db.Column(db.String(50) , nullable = False)
     price = db.Column(db.Float(), nullable = False)
     e_impact = db.Column(db.String(50) , nullable = False)
     image_url = db.Column(db.String(64), nullable = False)
@@ -141,12 +147,13 @@ def Product_page():
     if (Car_name == None): # if users chooses a page with no car it then goes to the index function which goes to the product page
         return index()
     
+    
     # looks through the database 
     searched_car = Products.query.filter_by(name=Car_name).first()
     if(searched_car == None):
         return index()
     else:
-        return render_template("Product.html" , name=Car_name , description = searched_car.description , Price =searched_car.price , E_impact = searched_car.e_impact , Image =searched_car.image_url)
+        return render_template("Product.html" , name=Car_name , description = searched_car.description , Engine =searched_car.engine ,Torque = searched_car.torque,Transmission = searched_car.transmission ,Weight = searched_car.weight, Size = searched_car.size, Zero_to_60 = searched_car.zero_to_60, Price =searched_car.price , E_impact = searched_car.e_impact , Image =searched_car.image_url)
 
 
 if __name__ == '__main__':
