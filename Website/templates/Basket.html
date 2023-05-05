@@ -19,7 +19,7 @@
     <hr>
     <td><p>{{name}}</p></td>
     <td><p>£{{items[name]["price"]}}</p></td>
-    <td><p>{{items[name]["amount"]}}</p><td>
+    <td><p>{{items[name]["amount"]}}</p></td>
     <td><p>£{{(items[name]["price"] *items[name]["amount"])}}</p></td>
     </tr>
     {% set cost.value = cost.value + items[name]["price"] *items[name]["amount"] %}

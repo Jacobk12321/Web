@@ -33,15 +33,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(16), index=True, unique=True)
     password_hash = db.Column(db.String(64))
-
-class Products(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    description = db.Column(db.String(200), nullable=False)
-    price = db.Column(db.Float, nullable=False)
-    e_impact = db.Column(db.String(50) , nullable=False)
-
-
+    
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -58,6 +50,14 @@ class Products(db.Model):
 
     def __repr__(self):
         return '<User {0}>'.format(self.username)
+
+class Products(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    description = db.Column(db.Text(), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    e_impact = db.Column(db.String(50) , nullable=False)
+
 
 
 @lm.user_loader

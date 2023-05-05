@@ -1,12 +1,19 @@
 from main import db, Products
 db.create_all()
 
-P1= Products(name="AE86",description="TEMP",price="20000",e_impact="None")
+P1= Products(name="AE86",description=""" The Toyota Sprinter Trueno AE86 is a legendary sports car that was produced by Toyota from 1983 to 1987. It is perhaps best known for its appearance in the popular Japanese anime and manga series Initial D, where it was driven by the main character, Takumi Fujiwara.
+The AE86 has a classic and timeless design, with a boxy shape and angular lines that give it a distinctively 80s look. Its compact size and lightweight construction make it an agile and nimble performer on the road.
+Under the hood, the AE86 is powered by a 1.6-liter inline-four engine, which produces around 130 horsepower. While not particularly powerful by modern standards, the engine is known for its high-revving capabilities and smooth power delivery.
+Inside, the AE86 is designed for the driver, with a simple and functional dashboard and controls that are easy to reach and operate. The seats are supportive and comfortable, and the steering wheel and shifter are positioned perfectly for sporty driving.
+
+Engine: 1587cc 4cyl, dohc, 16v
+Max torque: 149Nm @ 5200rpm
+Transmission: 5-speed manual
+Weight: 970kg
+0-100km/h: 8.5sec 
+L/W/H/WB: 4204/1626/1336/2400mm
+environmental impact : 500 g CO2/km 
+""",price="30000",e_impact="500 g CO2/km")
 
 db.session.add(P1)
-
-from main import db, Products
-db.create_all()
-P2 = Products(name="GTR", description="TEMP" ,price="250000" , e_impact="None")
-db.session.add(P2)
 db.session.commit()
