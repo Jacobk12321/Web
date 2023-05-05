@@ -14,7 +14,8 @@ Weight: 970kg
 L/W/H/WB: 4204/1626/1336/2400mm
 environmental impact : 500 g CO2/km """,
 price="30000",
-e_impact="500 g CO2/km")
+e_impact="500 g CO2/km",
+image_url ="static/Images/CW_1" )
 
 P2= Products(name="GTR",description = """The Nissan GT-R 2018 is a high-performance sports car that is known for its incredible speed and precision handling. This car is the latest in a long line of legendary GT-R models, and it continues to push the boundaries of what is possible in terms of performance and technology.
 The exterior of the GT-R 2018 is sleek and aggressive, with a low profile and sharp lines that give it a distinctive look. The front grille is large and imposing, and the rear spoiler provides both downforce and visual impact.
@@ -30,7 +31,8 @@ Weight : 1785 Kg
 L/W/H/WB: 185.4/74.6/53.9/109.4 in
 environmental impact : 275g CO2/km comb """,
 price= "92000", 
-e_impact ="275g CO2/km comb")
+e_impact ="275g CO2/km comb",
+image_url ="static/Images/CW_2")
  
 
 P3= Products(name="Audi_R8",description = """The Audi R8 is a high-performance sports car that offers a perfect blend of power, luxury, and style. This two-seater supercar is designed to deliver an exhilarating driving experience, with its sleek design, powerful engine, and advanced technology.
@@ -47,7 +49,8 @@ Weight : 1625 Kg
 L/W/H/WB : 4426/1940/1240/2650 mm
 environmental impact :285g CO2/Km""",
 price= "120000",
-e_impact="285g CO2/km")
+e_impact="285g CO2/km",
+image_url ="static/Images/CW_3")
 
 P4=Products(name="P1",description =""" The McLaren P1 is a limited-edition hybrid supercar that is designed to deliver the ultimate driving experience. This iconic car was produced between 2013 and 2015 and has quickly become one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the McLaren P1 is sleek and aerodynamic, with a low and wide stance that screams performance. Its curvy body lines and sharp edges create a bold and dynamic look, while the distinctive dihedral doors add to its aggressive character.
@@ -63,7 +66,8 @@ Weight : 1490 Kg
 L/W/H/WB = 4588/1956/1188/2670 mm
 environmental impact : 194 g CO2/Km""",
 price = "1200000",
-e_impact="194g CO2/km")
+e_impact="194g CO2/km",
+image_url ="static/Images/CW_4")
 
 P5= Products(name="RX-7", description = """The Mazda RX-7 is a classic sports car that was produced by Mazda from 1978 to 2002. It was one of the company's most iconic models, known for its sleek design, excellent handling, and powerful rotary engine.
 The RX-7's design is characterized by its long, low hood, sharply angled windshield, and short, sloping rear deck. Its aerodynamic shape and lightweight body give it a sporty and agile appearance, while its pop-up headlights and wrap-around taillights add a touch of elegance.
@@ -78,7 +82,8 @@ Weight : 1284kg
 L/W/H/WB : 4295/1750/1230/2425 mm
 environmental impact : 325g CO2 /km""",
 price = "21000",
-e_impact ="325g CO2/km")
+e_impact ="325g CO2/km",
+image_url ="static/Images/CW_5")
 
 P6= Products(name="180SX",description =""" The Nissan 180SX/Silvia is a popular sports car that was produced from 1989 to 1998. This car is highly sought after by car enthusiasts and drifters around the world for its sleek design, rear-wheel drive handling, and potential for high-performance modifications.
 The exterior of the Nissan 180SX/Silvia is sporty and aerodynamic, with a low profile and smooth lines that give it a distinctive look. The car's pop-up headlights and sloping rear end give it a timeless appeal, while the lightweight body makes it ideal for racing and drifting.
@@ -94,7 +99,8 @@ Weight : 1270 kg
 L/W/H/WB : 4540/1690/1290/2475 mm
 environmental impact : 350g CO2/km comb""",
 price = 16000,
-e_impact ="350g CO2/km comb")
+e_impact ="350g CO2/km comb",
+image_url ="static/Images/CW_6")
 
 P7 =Products(name="2020_acura",description =""" The 2020 Acura NSX is a stunning supercar that represents the pinnacle of Acura's engineering prowess. This two-seater sports car is designed to deliver a thrilling driving experience, with its sleek design, powerful engine, and advanced technology.
 The exterior of the Acura NSX is sleek and aerodynamic, with a low and wide stance that gives it an aggressive and sporty look. The car's LED headlights and taillights are sleek and futuristic, and the wide front grille provides both style and function.
@@ -109,7 +115,8 @@ Weight : 1790 kg
 L/W/H/WB : 176.1/87.3/47.8/103.5 in
 environmental impact : 280 g CO2/km""",
 price ="127000",
-e_impact = "280 g CO2/km")
+e_impact = "280 g CO2/km",
+image_url ="static/Images/CW_7")
 
 P8 =Products(name="Bugatti",description =""" The Bugatti Chiron is a hypercar that represents the pinnacle of automotive engineering and design. This limited-edition supercar was introduced in 2016 as the successor to the Bugatti Veyron, and quickly became one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the Bugatti Chiron is sleek and aerodynamic, with a low and wide stance that exudes performance and style. Its curvy body lines and sharp edges create a bold and dynamic look, while the signature horseshoe grille and C-shaped headlight design pay homage to Bugatti's rich heritage.
@@ -125,7 +132,8 @@ Weight : 1996 kg
 L/W/H/WB : 4554/2038/1212/2711 mm
 environmental impact : 516g/km""",
 price ="2400000",
-e_impact = "515g CO2/km")
+e_impact = "515g CO2/km",
+image_url ="static/Images/CW_8")
 
 P9 = Products(name="Reliant_robin",description = """ The Reliant Robin is a three-wheeled car that was produced by the British manufacturer Reliant Motor Company from 1973 to 2002. This unique car is instantly recognizable by its unusual design, which features a single front wheel and two rear wheels.
 The exterior of the Reliant Robin is quirky and distinctive, with a tall and narrow body that gives it a distinctive look on the road. The car's large windows provide excellent visibility, while the lightweight design makes it nimble and easy to maneuver in tight spaces.
@@ -139,7 +147,8 @@ Weight : 436 kg
 L/W/H/WB : 3327/1422/1372/2159 mm
 environmental impact : 250 g CO2/km""",
 price ="4000",
-e_impact = "250g CO2/km")
+e_impact = "250g CO2/km",
+image_url ="static/Images/CW_9")
 
 db.session.add(P1)
 db.session.add(P2)

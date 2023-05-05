@@ -53,10 +53,11 @@ class User(UserMixin, db.Model):
 
 class Products(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    description = db.Column(db.Text(), nullable=False)
-    price = db.Column(db.Float, nullable=False)
-    e_impact = db.Column(db.String(50) , nullable=False)
+    name = db.Column(db.String(50))
+    description = db.Column(db.Text())
+    price = db.Column(db.Float)
+    e_impact = db.Column(db.String(50))
+    image_url = db.Column(db.String(64))
 
 
 
@@ -133,6 +134,19 @@ def Basket():
             else:
                 items[name] = {"price": added_product.price, "amount": 1}
     return render_template("Basket.html" ,items=items )
+
+@app.route()
+def Product_page():
+    Car_name = request.args.get("C_name")  
+    if (Car_name == None): # if users chooses a page with no car it then goes to the index function which goes to the product page
+        return index()
+    
+    # looks through the database 
+    searched_car = Products.query.filter_by(name=Car_name).first()
+    if(searched_car == None):
+        return index()
+    else:
+        render_template("Product.html" , name=Car_name , description = Products.description , Price =Products.price , E_impact = Products.e_impact)
 
 
 if __name__ == '__main__':
