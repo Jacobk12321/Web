@@ -49,11 +49,11 @@ price= "120000",
 e_impact="285g CO2/km",
 image_url ="static/Images/CW_3.jpg")
 
-P4=Products(name="P1",description =""" The McLaren P1 is a limited-edition hybrid supercar that is designed to deliver the ultimate driving experience. This iconic car was produced between 2013 and 2015 and has quickly become one of the most sought-after vehicles among car enthusiasts and collectors.
+P4=Products(name="P1",description ="""The McLaren P1 is a limited-edition hybrid supercar that is designed to deliver the ultimate driving experience. This iconic car was produced between 2013 and 2015 and has quickly become one of the most sought-after vehicles among car enthusiasts and collectors.
 The exterior of the McLaren P1 is sleek and aerodynamic, with a low and wide stance that screams performance. Its curvy body lines and sharp edges create a bold and dynamic look, while the distinctive dihedral doors add to its aggressive character.
 Under the hood, the McLaren P1 is powered by a hybrid powertrain that includes a 3.8-liter twin-turbo V8 engine paired with an electric motor. Together, they produce a total of 903 horsepower and 664 lb-ft of torque, which propels the car from 0-60 mph in just 2.6 seconds and on to a top speed of 217 mph.
 The interior of the McLaren P1 is focused on the driver, with a minimalist design that puts all the essential controls within easy reach. The bucket seats are made of lightweight carbon fiber and are designed to provide exceptional support and comfort during high-speed driving.
-The McLaren P1 also features advanced technology, including a high-resolution touchscreen display, a digital instrument cluster, and an active aerodynamics system that adjusts the car's downforce to optimize performance.""" ,
+The McLaren P1 also features advanced technology, including a high-resolution touchscreen display, a digital instrument cluster, and an active aerodynamics system that adjusts the car's downforce to optimize performance.""",
 
 engine= "Engine : V8 3.8L" ,
 torque = "max torque : 720 Nm @ 4000 rpm" ,
@@ -63,7 +63,7 @@ zero_to_60= "0-100 km/H : 2.8sec" ,
 size = " L/W/H/WB = 4588/1956/1188/2670 mm" ,
 price = "1200000",
 e_impact="194g CO2/km",
-image_url ="static/Images/CW_4.jpg") ,
+image_url ="static/Images/CW_4.jpg")
 
 P5= Products(name="RX-7", description = """The Mazda RX-7 is a classic sports car that was produced by Mazda from 1978 to 2002. It was one of the company's most iconic models, known for its sleek design, excellent handling, and powerful rotary engine.
 The RX-7's design is characterized by its long, low hood, sharply angled windshield, and short, sloping rear deck. Its aerodynamic shape and lightweight body give it a sporty and agile appearance, while its pop-up headlights and wrap-around taillights add a touch of elegance.
@@ -92,7 +92,7 @@ transmission = "Transmission : 5 speed manual",
 weight ="Weight : 1270 kg", 
 zero_to_60 = "0-100kmh : 6.9sec", 
 size= "L/W/H/WB : 4540/1690/1290/2475 mm", 
-price = 16000, 
+price = "16000", 
 e_impact ="350g CO2/km comb", 
 image_url ="static/Images/CW_6.jpg")
 
@@ -126,7 +126,7 @@ zero_to_60= "0-100kmh : 2.3sec" ,
 size = "L/W/H/WB : 4554/2038/1212/2711 mm" ,
 price ="2400000", 
 e_impact = "515g CO2/km", 
-image_url ="static/Images/CW_8.jpg") , 
+image_url ="static/Images/CW_8.jpg")  
 
 P9 = Products(name="Reliant_robin",description = """ The Reliant Robin is a three-wheeled car that was produced by the British manufacturer Reliant Motor Company from 1973 to 2002. This unique car is instantly recognizable by its unusual design, which features a single front wheel and two rear wheels.
 The exterior of the Reliant Robin is quirky and distinctive, with a tall and narrow body that gives it a distinctive look on the road. The car's large windows provide excellent visibility, while the lightweight design makes it nimble and easy to maneuver in tight spaces.
@@ -141,7 +141,7 @@ zero_to_60 = "0-100kmh : 16.1sec" ,
 size ="L/W/H/WB : 3327/1422/1372/2159 mm" ,
 price ="4000", 
 e_impact = "250g CO2/km", 
-image_url ="static/Images/CW_9.jpg") ,
+image_url ="static/Images/CW_9.jpg")
 
 db.session.add(P1)
 db.session.add(P2)
