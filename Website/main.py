@@ -116,7 +116,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index.html'))
+    return redirect(url_for('index'))
 
 @app.route('/register' ,methods=["POST","GET"] )
 def register_user():
@@ -128,12 +128,23 @@ def register_user():
 
 @app.route('/', methods=["POST" , "GET"])
 def index():
+    items = Products.query.all()
+    products = {}
+    for item in items:
+        name = item.name
+        products[name] = {}
+        products [name]["price"] = item.price
+        products [name]["e_impact"] = item.e_impact
+        products [name]["img"] = item.image_url
+        print(products[name]['price'])
+
+
     if(request.method == "POST" and "name" in request.form):
         if(request.form["name"] != None):
             item_name = request.form["name"]
             #added_product = Products.query.filter_by(name=item_name).first()
             Basket_adding(item_name)
-
+    
         
     return render_template('index.html')
 

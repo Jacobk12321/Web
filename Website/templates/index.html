@@ -18,15 +18,16 @@
     <tr>
         <th style="width:40%"> Image</th>
         <th style="width:10%;">Name</th>
-        <th style="width:30%" > Description</th>
-        <th style="width:10%;" > Price</th>
+        <th style="width:20%;" > Price</th>
+        <th style="width:20%;">Environmental impact</th>
         <th style="width:10%">Add to basket</th>
+
     </tr>
     <tr>
         <td> <img src ="/static/Images/CW_1.jpg" alt = "AE86" style="height: auto; width: 50%;"></td>
         <td><a href="/Product?Car_name=AE86">AE86</a></td>
-        <td> (insert text here)</td>
-        <td>£30000 </td>
+        <td><p>{{[AE86]["price"]}} </p></td>
+        <td> EEEEE impact</td>
         <td> <button name="name" value="AE86" type="submit"> Add to basket</button></td>
     </tr>
     <tr>
