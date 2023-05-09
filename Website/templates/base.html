@@ -16,17 +16,20 @@
             <a class="navbar-brand" href="{{ url_for('index') }}">
                 Products
             </a>
-            <a class="navbar-brand" href="{{ url_for('Basket') }}">
-                Basket
-            </a>
+            
             <ul class="nav navbar-nav navbar-right">
+                <a class="navbar-brand" href="{{ url_for('Basket') }}">
+                    Basket
+                </a>
                 <li>
                     {% if current_user.is_authenticated %}
                         <a href="{{ url_for('logout') }}">Logout</a>
                     {% else %}
                         <a href="{{ url_for('login') }}">Login</a>
+                        <a class="navbar-brand" href="{{ url_for('register_user') }}">Sign up</a>
                     {% endif %}
                 </li>
+                
             </ul>
         </div>
     </nav>

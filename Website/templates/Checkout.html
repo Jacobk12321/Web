@@ -1,2 +1,22 @@
 {% extends "base.html" %}
 
+{% block title %}Checkout page{% endblock %}
+{% block page_content %}
+<div class="container">
+    <form method="POST">
+        {{form.hidden_tag()}}
+
+
+        <p>Card number :{{form.Card_num}}</p>
+        {{Error}}
+        <p>Security number : {{form.Security_numb}}</p>
+        {{Error_2}}
+        <p>Expiration date: {{form.EXP_date_mon}} {{form.EXP_date_Year}}</p>
+        {{Error_3}}
+        <p>Address : {{form.Address}}</p>
+        {{Error_4}}
+        <button name="Payment" value="Payment" type="submit">Proceed with Payment</button>
+    </form>
+</div>
+
+{% endblock %}

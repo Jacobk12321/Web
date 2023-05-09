@@ -3,50 +3,80 @@
 
 {% block title %}register page{% endblock %}
 
-
-
-
-</head>
-<body></br></br></br></br></br>
-    <div align="center">
-      <div align="center" class="border">
-         <div class="header">
-            <h1 class="word">Register</h1>
-         </div></br></br></br>
-        <h2 class="word">
-            <form action="{{ url_for('register') }}" method="post">
-              <div class="msg">{{ msg }}</div>
-                <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
-                <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
-                <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
-                <input type="submit" class="btn" value="Sign Up"></br>
-            </form>
-        </h2>
-        <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
-      </div>
+{% block page_content %}
+<div class="container">
+    <form method="POST">
+        {{form.hidden_tag()}}
+<fieldset>
+    <legend class="border_bottom mb-4">Sign up</legend>
+    <div class="form-group">
+        {{form.username.label(class="from=control-label")}}
+        {% if form.username.errors %}
+        {{form.username(class="from=control form-control-lg is-invalid")}}
+        {% for error in form.username.errors %}
+        <span>{{error}}</span>
+        {% endfor %}
+        {% else %}
+        {{form.username(class="from=control form-control-lg is-invalid")}}
+        {% endif %}
     </div>
-</body>
-</html>
+    <div class="form-group">
+        {{form.password.label(class="from=control-label")}}
+        {% if form.password.errors %}
+        {{form.password(class="from=control form-control-lg is-invalid")}}
+        {% for error in form.password.errors %}
+        <span>{{error}}</span>
+        {% endfor %}
+        {% else %}
+        {{form.password(class="from=control form-control-lg is-invalid")}}
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{form.confirm_password.label(class="from=control-label")}}
+        {% if form.confirm_password.errors %}
+        {{form.confirm_password(class="from=control form-control-lg is-invalid")}}
+        {% for error in form.confirm_password.errors %}
+        <span>{{error}}</span>
+        {% endfor %}
+        {% else %}
+        {{form.confirm_password(class="from=control form-control-lg is-invalid")}}
+        {% endif %}
+    </div>
+</fieldset>
+<div class="field_group">
+    {{form.Submit(class='btn btn-online-info')}}
+</div>
 
-<!-- Store this code in 'index.html' file inside the 'templates' folder-->
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title> Index </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">                    
+
+
+    </form> 
+</div>
+
+{% endblock %}
+
+
+
+<!---
 </head>
 <body></br></br></br></br></br>
     <div align="center">
     <div align="center" class="border">
         <div class="header">
-            <h1 class="word">Index</h1>
+            <h1 class="word">Register</h1>
         </div></br></br></br>
-            <h1 class="bottom">
-                 Hi {{session.username}}!!</br></br> Welcome to the index page...                
-            </h1></br></br></br>
-            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
-      </div>
+        <h2 class="word">
+            <form action="{{ url_for('register') }}" method="post">
+            <div class="msg">{{ msg }}</div>
+                <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
+                <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+                <input type="submit" class="btn" value="Sign Up"></br>
+            </form>
+        </h2>
+        <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+    </div>
     </div>
 </body>
 </html>
+-->
+

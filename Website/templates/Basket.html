@@ -28,6 +28,8 @@
     </table>
     
     <button name="clear_all" value="clear_all" type="submit"> clear basket</button>
+    <!--<button name="Checkout" value="Checkout">Checkout</button>-->
+    <a href="{{url_for('Checkout')}}">Go to checkout</a>
     <h3>Total cost : £{{cost.value}} </h3>
 {% else %}
 <h3>No items in basket</h3>
