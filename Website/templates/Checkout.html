@@ -6,11 +6,13 @@
     <form method="POST">
         {{form.hidden_tag()}}
 
-
-        <p>Card number :{{form.Card_num}}</p>
+        <p>Make sure card number has 16 digits</p>
+        <p>Card number :{{form.Card_num}} </p>
         {{Error}}
+        <p>3 numbers usually on the back of the card</p>
         <p>Security number : {{form.Security_numb}}</p>
         {{Error_2}}
+        <p>Expiration month is 2 digits long</p>
         <p>Expiration date: {{form.EXP_date_mon}} {{form.EXP_date_Year}}</p>
         {{Error_3}}
         <p>Address : {{form.Address}}</p>
