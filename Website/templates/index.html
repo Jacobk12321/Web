@@ -14,95 +14,35 @@
     <h1>Product page</h1>
     
 <form method="POST">
-<table style="width:100%">
-    <tr>
-        <th style="width:40%"> Image</th>
-        <th style="width:10%;">Name</th>
-        <th style="width:20%;" > Price</th>
-        <th style="width:20%;">Environmental impact</th>
-        <th style="width:10%">Add to basket</th>
-
-    </tr>
-    {% for key in products %}
+    <label for="Filter_by">Filter By</label>
+    <select name="Sort_by" id="Filter_by">
+        <option value="Alphabetical">Alphabetical</option>
+        <option value="Environmental_impact">Environmental impact</option>
+        <option value="Price">Price</option>
+    </select>
+    <table style="width:100%">
         <tr>
-            <td> <img src ="/{{products[key]['img']}}" alt = "{{key}}" style="height: auto; width: 50%;"></td>
-            <td><a href="/Product?Car_name={{key}}">{{key}}</a></td>
-            <td>{{products[key]['price']}}</td>
-            <td> {{products[key]['e_impact']}}</td>
-            <td> <button name="name" value="{{key}}" type="submit"> Add to basket</button></td>
+            <th style="width:40%"> Image</th>
+            <th style="width:10%;">Name</th>
+            <th style="width:20%;" > Price</th>
+            <th style="width:20%;">Environmental impact</th>
+            <th style="width:10%">Add to basket</th>
         </tr>
-    {% endfor %}
-    
-    
-    
-        <!--
-
-    <tr>
-        <td> <img src ="/static/Images/CW_1.jpg" alt = "AE86" style="height: auto; width: 50%;"></td>
-        <td><a href="/Product?Car_name=AE86">AE86</a></td>
-        <td><p>{{[AE86]["price"]}} </p></td>
-        <td> EEEEE impact</td>
-        <td> <button name="name" value="AE86" type="submit"> Add to basket</button></td>
-    </tr>
-    <tr>
-        <td> <img src= "static/Images/CW_2.jpg" alt="Nissan GTR" style="height: auto; width: 50%;" ></td>
-        <td><a href="/Product?Car_name=GTR">Nissan GTR</a></td>
-        <td> (insert text here)</td>
-        <td> £92000</td>
-        <td> <button name="name" value="GTR" type="submit"> Add to basket</button></td>
-    </tr>
-    <tr>
-        <td> <img src="/static/Images/CW_3.jpg" alt="Audi R8"style="height: auto; width:  50%;" ></td>
-        <td><a href="/Product?Car_name=Audi_R8">Audi R8</a></td>
-        <td> (insert text here)</td>
-        <td> £120000</td>
-        <td> <button name="name" value="Audi_R8" type="submit"> Add to basket</button></td>
-    </tr>
-    <tr> 
-        <td> <img src = "/static/Images/CW_4.jpg" alt = "Mclaren P1" style="height: auto; width: 50%;"></td>
-        <td><a href="/Product?Car_name=P1">Mclaren P1</a></td>
-        <td> (insert text here)</td>
-        <td> £1200000</td>
-        <td> <button name="name" value="P1" type="submit" > Add to basket</button></td>
-    </tr>
-    <tr> 
-        <td> <img ID="photo" img src = "/static/Images/CW_5.jpg" alt = "Mazda RX-7" style="height: auto; width: 50%;"></td>
-        <td> <a href="/Product?Car_name=RX-7">Mazda RX-7</a></td>
-        <td> (insert text here)</td>
-        <td> £21000</td>
-        <td> <button name="name" value="RX-7" type="submit"> Add to basket</button></td>
-    </tr>
-    <tr>
-        <td> <img ID="photo" img src ="/static/Images/CW_6.jpg" alt ="Nissan 180SX" style="height: auto; width: 50%;"> </td>
-        <td> <a href="/Product?Car_name=180SX">Nissan 180SX</a></td>
-        <td> (insert text here)</td>
-        <td> £16000</td>
-        <td> <button name="name" value="180SX" type="submit"> Add to basket</button></td>
-    </tr>
-    <tr>
-        <td> <img ID="photo" img src = "/static/Images/CW_7.jpg" alt= "Honda 2020 Acura NSX" style="height: auto; width: 50%;"></td>
-        <td> <a href="/Product?Car_name=2020_acura">Honda 2020 Acura NSX</a></td>
-        <td> (insert text here)</td>
-        <td> £127000</td>
-        <td> <button name="name" value="2020_acura" type="submit" > Add to basket</button></td>
-    </tr>
-    <tr> 
-        <td> <img ID="photo" img src ="/static/Images/CW_8.jpg" alt = "Bugatti Chiron" style="height: auto; width: 50%;"> </td>
-        <td> <a href="/Product?Car_name=Bugatti">Bugatti Chiron</a></td>
-        <td> (insert text here)</td>
-        <td> £2400000</td>
-        <td> <button name="name" value="Bugatti" type="submit"> Add to basket</button></td>
-    </tr>
-    <tr>
-        <td> <img ID="photo" img src ="/static/Images/CW_9.jpg" alt = "Reliant robin" style="height: auto; width: 50%;"> </td>
-        <td> <a href="/Product?Car_name=Reliant_robin">Reliant Robin</a></td>
-        <td> (insert text here)</td>
-        <td> £4000</td>
-        <td> <button name="name" value="Reliant_robin" type="submit" > Add to basket</button></td>
-    </tr>
-            -->
-</table>
+        <tbody id="product_holder">
+            {% for key in products %}
+                <tr class = "Car">
+                    <input type="hidden" id="data", name="{{key}},{{products[key]['price']}},{{products[key]['e_impact']}}">
+                    <td> <img src ="/{{products[key]['img']}}" alt = "{{key}}" style="height: auto; width: 50%;"></td>
+                    <td><a href="/Product?Car_name={{key}}">{{key}}</a></td>
+                    <td>{{products[key]['price']}}</td>
+                    <td> {{products[key]['e_impact']}} g CO2/Km</td>
+                    <td> <button name="name" value="{{key}}" type="submit"> Add to basket</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </form>
+<script src="../static/Filter.js" type="text/javascript" onload="mainSort('Alphabetical')"></script>
 {% endblock %}
 
 

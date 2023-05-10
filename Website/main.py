@@ -77,7 +77,7 @@ class Products(db.Model):
     size = db.Column(db.String(50) , nullable = False)
     zero_to_60 = db.Column(db.String(50) , nullable = False)
     price = db.Column(db.Float(), nullable = False)
-    e_impact = db.Column(db.String(50) , nullable = False)
+    e_impact = db.Column(db.Integer , nullable = False)
     image_url = db.Column(db.String(64), nullable = False)
 
 

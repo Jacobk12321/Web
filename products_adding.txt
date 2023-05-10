@@ -12,7 +12,7 @@ weight =" Weight: 970kg" ,
 size ="L/W/H/WB: 4204/1626/1336/2400mm",
 zero_to_60 ="0-100km/h: 8.5sec" ,
 price="30000", 
-e_impact="500 g CO2/km", 
+e_impact= 500 , 
 image_url ="static/Images/CW_1.jpg")  
 
 
@@ -29,7 +29,7 @@ weight = "Weight : 1785 Kg" ,
 zero_to_60 = "0-100km/h : 3.3sec" ,
 size ="L/W/H/WB: 185.4/74.6/53.9/109.4 in" ,
 price= "92000", 
-e_impact ="275g CO2/km comb",
+e_impact =275 ,
 image_url ="static/Images/CW_2.jpg")
  
 
@@ -46,7 +46,7 @@ weight =" Weight : 1625 Kg" ,
 zero_to_60 =" 0-100km/h : 3.5sec" ,
 size= "L/W/H/WB : 4426/1940/1240/2650 mm" , 
 price= "120000", 
-e_impact="285g CO2/km",
+e_impact=285 ,
 image_url ="static/Images/CW_3.jpg")
 
 P4=Products(name="P1",description ="""The McLaren P1 is a limited-edition hybrid supercar that is designed to deliver the ultimate driving experience. This iconic car was produced between 2013 and 2015 and has quickly become one of the most sought-after vehicles among car enthusiasts and collectors.
@@ -62,7 +62,7 @@ weight = "Weight : 1490 Kg" ,
 zero_to_60= "0-100 km/H : 2.8sec" ,
 size = " L/W/H/WB = 4588/1956/1188/2670 mm" ,
 price = "1200000",
-e_impact="194g CO2/km",
+e_impact=194 ,
 image_url ="static/Images/CW_4.jpg")
 
 P5= Products(name="RX-7", description = """The Mazda RX-7 is a classic sports car that was produced by Mazda from 1978 to 2002. It was one of the company's most iconic models, known for its sleek design, excellent handling, and powerful rotary engine.
@@ -77,7 +77,7 @@ weight = "Weight : 1284kg" ,
 zero_to_60= "0-100kmh : 5.4sec ",
 size = "L/W/H/WB : 4295/1750/1230/2425 mm" ,
 price = "21000", 
-e_impact ="325g CO2/km",
+e_impact =325 ,
 image_url ="static/Images/CW_5.jpg")
 
 P6= Products(name="180SX",description =""" The Nissan 180SX/Silvia is a popular sports car that was produced from 1989 to 1998. This car is highly sought after by car enthusiasts and drifters around the world for its sleek design, rear-wheel drive handling, and potential for high-performance modifications.
@@ -93,7 +93,7 @@ weight ="Weight : 1270 kg",
 zero_to_60 = "0-100kmh : 6.9sec", 
 size= "L/W/H/WB : 4540/1690/1290/2475 mm", 
 price = "16000", 
-e_impact ="350g CO2/km comb", 
+e_impact =350, 
 image_url ="static/Images/CW_6.jpg")
 
 P7 =Products(name="2020_acura",description =""" The 2020 Acura NSX is a stunning supercar that represents the pinnacle of Acura's engineering prowess. This two-seater sports car is designed to deliver a thrilling driving experience, with its sleek design, powerful engine, and advanced technology.
@@ -109,7 +109,7 @@ weight = "Weight : 1790 kg" ,
 zero_to_60= "0-100kmh : 2.9 sec" ,
 size =  "L/W/H/WB : 176.1/87.3/47.8/103.5 in" ,
 price ="127000",
-e_impact = "280 g CO2/km", 
+e_impact = 280  , 
 image_url ="static/Images/CW_7.jpg")
 
 P8 =Products(name="Bugatti",description =""" The Bugatti Chiron is a hypercar that represents the pinnacle of automotive engineering and design. This limited-edition supercar was introduced in 2016 as the successor to the Bugatti Veyron, and quickly became one of the most sought-after vehicles among car enthusiasts and collectors.
@@ -125,7 +125,7 @@ weight = "Weight : 1996 kg" ,
 zero_to_60= "0-100kmh : 2.3sec" ,
 size = "L/W/H/WB : 4554/2038/1212/2711 mm" ,
 price ="2400000", 
-e_impact = "515g CO2/km", 
+e_impact = 515 , 
 image_url ="static/Images/CW_8.jpg")  
 
 P9 = Products(name="Reliant_robin",description = """ The Reliant Robin is a three-wheeled car that was produced by the British manufacturer Reliant Motor Company from 1973 to 2002. This unique car is instantly recognizable by its unusual design, which features a single front wheel and two rear wheels.
@@ -140,7 +140,7 @@ weight ="Weight : 436 kg" ,
 zero_to_60 = "0-100kmh : 16.1sec" ,
 size ="L/W/H/WB : 3327/1422/1372/2159 mm" ,
 price ="4000", 
-e_impact = "250g CO2/km", 
+e_impact = 250, 
 image_url ="static/Images/CW_9.jpg")
 
 db.session.add(P1)
