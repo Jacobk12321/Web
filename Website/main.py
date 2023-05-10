@@ -136,8 +136,6 @@ def index():
         products [name]["price"] = item.price
         products [name]["e_impact"] = item.e_impact
         products [name]["img"] = item.image_url
-        print(products[name]['price'])
-
 
     if(request.method == "POST" and "name" in request.form):
         if(request.form["name"] != None):
@@ -146,7 +144,7 @@ def index():
             Basket_adding(item_name)
     
         
-    return render_template('index.html')
+    return render_template('index.html', products=products)
 
 def Basket_adding(name):
     if("basket" not in session):
@@ -189,11 +187,16 @@ def Basket():
                 items[name] = {"price": added_product.price, "amount": 1}
     return render_template("Basket.html" ,items=items )
 
-@app.route('/Product')
+@app.route('/Product' , methods=['POST' , 'GET'])
 def Product_page():
     Car_name = request.args.get("Car_name")  
     if (Car_name == None): # if users chooses a page with no car it then goes to the index function which goes to the product page
         return index()
+    
+    if(request.method == "POST" and "name" in request.form):
+        if(request.form["name"] != None):
+            item_name = request.form["name"]
+            Basket_adding(item_name)
     
     # looks through the database 
     searched_car = Products.query.filter_by(name=Car_name).first()
@@ -204,9 +207,6 @@ def Product_page():
 
 @app.route('/Checkout', methods=['GET', 'POST'])
 def Checkout():
-    print("eee")
-    print(request.form)
-
     form = checkout_form()
     Error =""
     Error_2 = ""

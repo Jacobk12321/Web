@@ -23,6 +23,20 @@
         <th style="width:10%">Add to basket</th>
 
     </tr>
+    {% for key in products %}
+        <tr>
+            <td> <img src ="/{{products[key]['img']}}" alt = "{{key}}" style="height: auto; width: 50%;"></td>
+            <td><a href="/Product?Car_name={{key}}">{{key}}</a></td>
+            <td>{{products[key]['price']}}</td>
+            <td> {{products[key]['e_impact']}}</td>
+            <td> <button name="name" value="{{key}}" type="submit"> Add to basket</button></td>
+        </tr>
+    {% endfor %}
+    
+    
+    
+        <!--
+
     <tr>
         <td> <img src ="/static/Images/CW_1.jpg" alt = "AE86" style="height: auto; width: 50%;"></td>
         <td><a href="/Product?Car_name=AE86">AE86</a></td>
@@ -86,6 +100,7 @@
         <td> £4000</td>
         <td> <button name="name" value="Reliant_robin" type="submit" > Add to basket</button></td>
     </tr>
+            -->
 </table>
 </form>
 {% endblock %}
