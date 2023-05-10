@@ -78,4 +78,12 @@ tr:nth-child(odd) {
     
     
     nav>a:hover {background-color: darkseagreen;}
-    
+
+li
+{
+    float: left;
+}
+li2
+{
+    float: right;
+}

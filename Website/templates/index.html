@@ -22,8 +22,8 @@
     </select>
     <table style="width:100%">
         <tr>
-            <th style="width:40%"> Image</th>
-            <th style="width:10%;">Name</th>
+            <th style="width:35%"> Image</th>
+            <th style="width:30%;">Name</th>
             <th style="width:20%;" > Price</th>
             <th style="width:20%;">Environmental impact</th>
             <th style="width:10%">Add to basket</th>
@@ -34,7 +34,7 @@
                     <input type="hidden" id="data", name="{{key}},{{products[key]['price']}},{{products[key]['e_impact']}}">
                     <td> <img src ="/{{products[key]['img']}}" alt = "{{key}}" style="height: auto; width: 50%;"></td>
                     <td><a href="/Product?Car_name={{key}}">{{key}}</a></td>
-                    <td>{{products[key]['price']}}</td>
+                    <td>£{{products[key]['price']}}</td>
                     <td> {{products[key]['e_impact']}} g CO2/Km</td>
                     <td> <button name="name" value="{{key}}" type="submit"> Add to basket</button></td>
                 </tr>
