@@ -212,6 +212,7 @@ def Checkout():
     Error_2 = ""
     Error_3 = ""
     Error_4 = ""
+    Error_5=""
     if form.validate_on_submit():
         card_num = str(request.form["Card_num"])
         Security_num = str(request.form["Security_numb"])
@@ -219,22 +220,24 @@ def Checkout():
         EXP_date_Year = str(request.form["EXP_date_Year"])
         if (len(card_num) <16):
             Error =("Please enter a valid card number")
-            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4) 
+            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4 , error_5=Error_5) 
+        if (len(card_num) > 16):
+            Error_2 =("Enter a valid card number")
         if (len(Security_num) < 3):
-            Error_2=("Enter a valid Security number")
-            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4) 
+            Error_3=("Enter a valid Security number")
+            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4 , error_5=Error_5) 
         if(len(EXP_date_mon) < 2):
-            Error_3=("Enter a valid expiry month")
-            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4) 
+            Error_4=("Enter a valid expiry month")
+            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4, error_5=Error_5) 
         if(len(EXP_date_Year) < 4):
-            Error_4 =("Enter a valid expiry year")
-            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4) 
+            Error_5 =("Enter a valid expiry year")
+            return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4, error_5=Error_5) 
         
         session.pop('basket')
         session.modified = True
         return render_template("Payment.html")
         
-    return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4) 
+    return render_template("Checkout.html" , form=form, error=Error , error_2=Error_2 , error_3=Error_3,error_4 = Error_4 , error_5 = Error_5) 
     
 @app.route('/Payment')
 def Payment():
